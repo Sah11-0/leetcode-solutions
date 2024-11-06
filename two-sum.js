@@ -16,3 +16,21 @@ var twoSum = function (nums, target) {
 
     return [-1, -1];
 };
+
+
+//Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once.
+
+function twoSumPairs(arr, sum) {
+    const seenNums = {};
+    const pairs = [];
+
+    for (const currentNum of arr) {
+        const diff = sum - currentNum
+        if (seenNums[diff]) {
+            pairs.push([currentNum, diff])
+        } else {
+            seenNums[currentNum] = true;
+        }
+    }
+    return pairs;
+}

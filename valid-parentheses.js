@@ -29,7 +29,6 @@ var isValid = function (s) {
 };
 
 //solution 2
-
 function isValid(s) {
     const stack = [];
     const map = {
@@ -50,4 +49,4 @@ function isValid(s) {
     }
 
     return stack.length === 0;
-}
+};
